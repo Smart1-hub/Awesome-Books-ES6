@@ -4,64 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome-Book with ES6</title>
     <link rel="stylesheet" href="index.css">
+    <title>Document</title>
 </head>
-<body>
-    <header class="header">
-        <h1 class="header-title">Awesome Books</h1>
+<body class="flex-center">
+    <div class="container flex-center">
         <nav>
-            <ul class="header-menu">
-                <li class="header-items"><a href="#" id="listBooks" class="bar">List</a></li>
-                <li class="header-items bar"><a href="#addBook-container" id="addBook" class="bar">Add New</a></li>
-                <li class="header-items"><a href="#contactUs-container" id="contactInfo">Contact</a></li>
-            </ul>
+            <a href="index.html"><h1>Awesome Books</h1></a>
+            <div class="nav-link">
+                <a class="list-link active" href="#">List</a>
+                <span class="line"></span>
+                <a class="add-link" href="#">Add new</a>
+                <span class="line"></span>
+                <a class="contact-link" href="#">Contact</a>
+            </div>
         </nav>
-    </header>
+        <p class="time"></p>
 
-    <main>
-        <section id="date">
-            <!--Date Section-->
-        </section>
-
-        <section class="book-section">
-
-            <section class="booklist-container" id="bookList-container">
-                <h2 class="fav-books">All awesome books</h2>
-                <ul id="books-list">
-                    <!--Book List-->
-                </ul>
-            </section>
-
-            <section class="book-container hide" id="addBook-container">
-                <h2 class="fav-books">Add a new book</h2>
-                <form class="form-books">
-                    <input id="bookTitle" type="text"  placeholder="Title">
-                    <input id="bookAuthor" type="text" placeholder="Author">
-                    <span class="error-msg"></span>
-                    <button id="add-book" type ="submit">Add</button>
+        <main>
+            <!--List of awesome books-->
+            <div class="list-book-container">
+                <h2 class="text-center">All awesome books</h2>
+                <div class="book-container">
+                </div>
+    
+            </div>
+            <!--Form input-->
+            <div class="container-form flex-center hidden">
+                <h2 class="text-center">Add a new book</h2>
+                <form id="form">
+                    <input type="text" placeholder="Title" id="titleInput">
+                    <input type="text" placeholder="Author" id="authorInput">
+                    <br> <br>
+                    <div class="add-btn-div">
+                        <button type="button" id="addBtn">Add</button>
+                    </div>
+                    <p class="notice hidden">⛔ Fields cannot be empty</p>
                 </form>
-            </section>
 
-            <section class="contact-container hide" id="contactUs-container">
-                <h2 class="contact-header">Contact information</h2>
-                <p class="contact-info">Do you have any questions or you just want to 
-                    say "Hello"? <br> You can reach out to us!
-                </p>
-                <ul class="contact-details">
+            </div>
+
+            <!--Contact info-->
+            <div class="contact-info hidden">
+                <h2 class="text-center">Contact information</h2>
+                <p>Do have any questions or just want to say "Hello"? You can reach out to us!</p>
+                <ul>
                     <li>Our e-mail: mail@mail.com</li>
-                    <li>Our phone number: +2349029661645</li>
-                    <li>Our address: Streetname 22, City, Country</li>
+                    <li>Our phone number: 0043586534422</li>
+                    <li>Our address: Streetname 22 84503 City, Country</li>
                 </ul>
-            </section>
-        </section>
-    </main> 
-    <footer class="footer">
-        <p>&copy; Awesome book 2022 - All right reserved - by
-          <a target="_blank" rel="noopener" href="https://github.com/Smart1-hub">Ademola</a> 
-        </p>
+            </div>
+            
+        
+            <script type="module" src="index.js"></script>
+
+    <footer class="copyright">
+        <p>Copyright   ...</p>
     </footer>
- 
-    <script type="module" src="./index.js"></script>
+
+
+        </main>
+        
+    </div>
+    
 </body>
 </html>
