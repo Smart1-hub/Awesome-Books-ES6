@@ -38,14 +38,6 @@ To get a local copy up and running:
 
 - LinkedIn: [Ademola Adebayo](https://www.linkedin.com/in/ademola-adebayo-81051578/)
 
-- Loom: 
-https://www.loom.com/share/4bae1adf0d6e49c6afcd492efdf32c24
-
-## Design By
-
-👤 **Cindy Shin**
-
-- Behance: https://www.behance.net/gallery/29845175/CC-Global-Summit-2015
 
 ## Acknowledgement
 
