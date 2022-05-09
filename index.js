@@ -1,76 +1,68 @@
-import { DateTime } from "./luxon.js";
-import * as Menu from './modules/displaylink.js';
+import { DateTime } from './luxon.js';
+import Book from './modules/book.js';
+import displayBooks from './modules/displayBooks.js';
 
+const addButton = document.querySelector('#add-book');
+const bookList = document.querySelector('#books-list');
 
-const bookList = document.querySelector('.book-list');
-const title = document.querySelector('.title');
-const author = document.querySelector('.author');
-const addBtn = document.querySelector('.add-btn');
-
-
-class Library {
-  static books = [];
-  listBooks;
-  static addBook = (e) => {
-    e.preventDefault();
-    this.books = JSON.parse(localStorage.getItem('books')) !== null ? (this.books = JSON.parse(localStorage.getItem('books'))) : [];
-    this.book = {
-      id: 0,
-      title: '',
-      author: '',
-    };
-
-    if (title.value === '' || author.value === '') {
-      return false;
-    }
-
-    this.book.title = title.value;
-    this.book.author = author.value;
-    this.book.id = this.books.length + 1;
-    this.books.push(this.book);
-    localStorage.setItem('books', JSON.stringify(this.books));
-    title.value = '';
-    author.value = '';
-
-    this.showListBooks();
-    return true;
-  }
-
-  static showListBooks = () => {
-    bookList.innerHTML = '';
-    this.listBooks = JSON.parse(localStorage.getItem('books'));
-    this.listBooks.forEach((element) => {
-      const listTag = `
-            <div class="add-books">
-              <p>"${element.title}" by ${element.author}</p>
-              <button type="button" class="remove-btn" id="${element.id}">Remove</button>
-            </div>
-        `;
-      bookList.innerHTML += listTag;
-    });
-    return this.bookList;
-  }
-
-  static deleteBooks = (e) => {
-    if (e.target.classList.contains('remove-btn')) {
-      const id = e.target.attributes.id.value;
-      const filteredBooks = this.listBooks.filter((book) => book.id !== +id);
-      this.listbooks = JSON.parse(localStorage.getItem('books'));
-      localStorage.setItem(
-        'books',
-        JSON.stringify(filteredBooks),
-      );
-      this.showListBooks();
-    }
-  }
+if (bookList !== null) {
+  bookList.classList.add('list-border');
+} else {
+  bookList.classList.remove('list-border');
 }
 
-addBtn.addEventListener('click', Library.addBook);
-bookList.addEventListener('click', Library.deleteBooks);
-document.addEventListener('DOMContentLoaded', Library.showListBooks);
+const books = JSON.parse(localStorage.getItem('books'));
+if (books !== null) {
+  books.forEach((book) => {
+    displayBooks(book.id, book.title, book.author);
+  });
+}
 
-// Display time
-const siteDate = DateTime.local();
-const now = today.toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS);
-time.textContent = now;
+document.addEventListener('DOMContentLoaded', () => {
+  addButton.addEventListener('click', (n) => {
+    n.preventDefault();
+    const title = document.getElementById('bookTitle').value;
+    const author = document.getElementById('bookAuthor').value;
+    const id = Date.now();
+    const book = new Book(id, title, author);
+    book.addBooks();
+    if (title && author) {
+      displayBooks(book.id, book.title, book.author);
+    }
+  });
+});
 
+const date = document.getElementById('date');
+const now = DateTime.now();
+date.innerText = now.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
+
+const listBooks = document.getElementById('listBooks');
+const addBook = document.getElementById('addBook');
+const contactUs = document.getElementById('contactInfo');
+
+listBooks.addEventListener('click', () => {
+  listBooks.classList.add('active');
+  addBook.classList.remove('active');
+  contactUs.classList.remove('active');
+  document.getElementById('bookList-container').classList.remove('hide');
+  document.getElementById('addBook-container').classList.add('hide');
+  document.getElementById('contactUs-container').classList.add('hide');
+});
+
+addBook.addEventListener('click', () => {
+  listBooks.classList.remove('active');
+  addBook.classList.add('active');
+  contactUs.classList.remove('active');
+  document.getElementById('addBook-container').classList.remove('hide');
+  document.getElementById('bookList-container').classList.add('hide');
+  document.getElementById('contactUs-container').classList.add('hide');
+});
+
+contactUs.addEventListener('click', () => {
+  listBooks.classList.remove('active');
+  addBook.classList.remove('active');
+  contactUs.classList.add('active');
+  document.getElementById('contactUs-container').classList.remove('hide');
+  document.getElementById('bookList-container').classList.add('hide');
+  document.getElementById('addBook-container').classList.add('hide');
+});

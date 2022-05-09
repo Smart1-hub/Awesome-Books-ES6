@@ -1,159 +1,321 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Lato&family=Poppins:wght@200;400;700&display=swap');
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-.content {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.title1 {
-  font-weight: 600;
-}
-
-.book_list {
-  width: 400px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 8px;
-  border: 2px solid;
-  padding: 10px;
-}
-
-.add-books {
-  display: flex;
-  justify-content: space-between;
-  font-weight: 500;
-}
-
-.remove-btn {
-  font-weight: bolder;
-  font-size: 18px;
-  cursor: pointer;
-  box-shadow: 4px 4px 4px 3px;
-  background-color: #fff;
-  border: 2px solid;
-  padding: 5px;
-}
-
-.title2 {
-  margin: 15px;
-}
-
-input {
-  width: 300px;
-  padding: 5px;
-  outline: none;
-  border: 2px solid;
-}
-
-.add_btn {
-  font-weight: bolder;
-  font-size: 18px;
-  cursor: pointer;
-  box-shadow: 4px 4px 4px 3px;
-  background-color: #fff;
-  border: 2px solid;
-  padding: 5px;
-  margin-left: 230px;
-}
-.add-books:nth-child(even) { background-color: white; }
-.add-books:nth-child(odd) { background-color: grey; }
-
-.nav-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  padding: 4px;
-  border: 2px solid;
-}
-
-.date {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  width: 100%;
-  padding-top: 10px;
-  padding-right: 70px;
-  margin-bottom: 50px;
-}
-
-/* #date { } */
-.list-items {
-  margin-right: -6px;
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  gap: 13px;
-  text-decoration: none;
-}
-
-ul.list-items li {
-  border-right: 2px solid;
-  padding-right: 20px;
-  height: 20px;
-}
-
-ul.list-items li a {
-  text-decoration: none;
-}
-
-.contact-section {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  font-family: 'Poppins', sans-serif;
-  gap: 15px;
-}
-
-.contact-info {
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-}
-
-.contact-heading {
-  font-weight: 600;
-  margin-left: 120px;
-  font-size: 30px;
-}
-
-.contact-para {
-  margin-top: 20px;
-  font-size: 19px;
-  text-align: center;
-}
-
-.list {
-  margin-left: 135px;
-  margin-top: 20px;
-  font-size: 17px;
-  margin-bottom: 20px;
-}
-
-.footer {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  border: 2px solid;
-  width: 90%;
-  padding: 10px;
-  margin: auto;
-}
-
-.copyright {
-  font-family: 'Poppins', sans-serif;
-  font-size: 19px;
-  font-weight: 600;
-}
+ul li {
+    list-style-type: none;
+    line-height: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .active {
+    color: blue;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    padding: 5px;
+    height: 50px;
+  }
+  
+  .header-title {
+    font-size: 18px;
+  }
+  
+  .header-menu {
+    display: flex;
+    margin-right: 5px;
+    gap: 10px;
+    background-color: black;
+  }
+  
+  .header-items {
+    font-weight: bold;
+    font-size: 12px;
+  }
+  
+  .bar {
+    border-right: 0.3em solid black;
+    padding-right: 5px;
+  }
+  
+  header ul li {
+    cursor: pointer;
+    list-style: none;
+  }
+  
+  main {
+    height: 80vh;
+  }
+  
+  #date {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  
+  .booklist-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .booklist-container ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5px;
+  }
+  
+  .booklist-border {
+    border: 3px solid black;
+  }
+  
+  .list-border {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding-left: 0;
+  }
+  
+  .book-info {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+    width: 100%;
+  }
+  
+  li button {
+    border: 3px solid black;
+    box-shadow: 3px 3px;
+    margin-top: 5px;
+  }
+  
+  ul li:nth-child(odd) {
+    background-color: rgba(128, 128, 128, 0.5);
+  }
+  
+  .book-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .form-books {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+  }
+  
+  #add-book {
+    border: 3px solid black;
+    box-shadow: 3px 3px;
+  }
+  
+  form input {
+    border: 3px solid black;
+    width: 180px;
+  }
+  
+  .error-msg {
+    color: red;
+  }
+  
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    padding: 0 15px;
+  }
+  
+  .contact-container ul li {
+    list-style: disc;
+  }
+  
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .footer {
+    border: 3px solid black;
+    padding: 5px 5px;
+    height: 50px;
+  }
+  
+  .footer p {
+    font-weight: bold;
+    margin-top: 0;
+  }
+  
+  .footer a {
+    color: blue;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border: 3px solid black;
+      padding: 5px;
+      height: 50px;
+    }
+  
+    .header-title {
+      margin-left: 20px;
+      font-size: 22px;
+    }
+  
+    .header-menu {
+      display: flex;
+      margin-right: 50px;
+      gap: 50px;
+      background-color: black;
+    }
+  
+    .header-items {
+      font-weight: bold;
+      font-size: 18px;
+    }
+  
+    .bar {
+      border-right: 0.3em solid black;
+      padding-right: 41px;
+    }
+  
+    header ul li {
+      cursor: pointer;
+      list-style: none;
+    }
+  
+    #date {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  
+    .booklist-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+    }
+  
+    .booklist-container ul li {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 5px;
+    }
+  
+    .booklist-border {
+      border: 3px solid black;
+    }
+  
+    .list-border {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      padding-left: 0;
+    }
+  
+    .book-info {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 5px;
+      width: 100%;
+    }
+  
+    li button {
+      border: 3px solid black;
+      box-shadow: 3px 3px;
+      margin-top: 5px;
+    }
+  
+    ul li:nth-child(odd) {
+      background-color: rgba(128, 128, 128, 0.5);
+    }
+  
+    .book-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 80px;
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .form-books {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-end;
+    }
+  
+    #add-book {
+      border: 3px solid black;
+      box-shadow: 3px 3px;
+    }
+  
+    form input {
+      border: 3px solid black;
+      width: 180px;
+    }
+  
+    .error-msg {
+      color: red;
+    }
+  
+    .contact-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 80px;
+    }
+  
+    .contact-container ul li {
+      list-style: disc;
+    }
+  
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+  
+    .hide {
+      display: none;
+    }
+  }
+  

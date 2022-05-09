@@ -8,49 +8,60 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header class="content">
-        <nav class="nav-bar">
-            <h1 class="awesome-logo">Awesome books</h1>
-            <ul class="list-items">
-                <li><a href="#" id="listId">List</a></li>
-                <li><a href="#" id="addBookId">Add new</a></li>
-                <li><a href="#" id="contactId">Contact</a></li>
+    <header class="header">
+        <h1 class="header-title">Awesome Books</h1>
+        <nav>
+            <ul class="header-menu">
+                <li class="header-items"><a href="#" id="listBooks" class="bar">List</a></li>
+                <li class="header-items bar"><a href="#addBook-container" id="addBook" class="bar">Add New</a></li>
+                <li class="header-items"><a href="#contactUs-container" id="contactInfo">Contact</a></li>
             </ul>
         </nav>
-        <div class="date">
-            <p id="date"></p>
-        </div>
-        <div class="showBook-section" id="showSection">
-            <h1 class="title1"> All awesome books</h1>
-            <div class="book-list">
-                <!-- Books added here -->
-            </div>
-        </div>
-        <div class="addBook-section" id="addSection">
-            <!-- <hr> -->
-            <h1 class="title2">Add a new book</h1>
-            <input type="text" class="title" placeholder="Title"> <br> <br>
-            <input type="text" class="author" placeholder="Author"> <br>
-            <button class="add-btn">Add</button>
-        </div>
     </header>
-    <section class="contact-section" id="contact">
-        <div class="contact-info">
-            <h2 class="contact-heading">Contact Information</h2>
-            <p class="contact-para">Do you have any questions or you just want to say "Hello"?. <br> You can reach out
-                to us!
-            </p>
-            <ul class="list">
-                <li>Our e-mail: mail@mail.com</li>
-                <li>Our Phone numbers :+2348056283678; +2349029661645</li>
-                <li>Our Address: 21, Awolowo Avenue, Old-Bodija, Ibadan, Nigeria.</li>
-            </ul>
-        </div>
-    </section>
+
+    <main>
+        <section id="date">
+            <!--Date Section-->
+        </section>
+
+        <section class="book-section">
+
+            <section class="booklist-container" id="bookList-container">
+                <h2 class="fav-books">All awesome books</h2>
+                <ul id="books-list">
+                    <!--Book List-->
+                </ul>
+            </section>
+
+            <section class="book-container hide" id="addBook-container">
+                <h2 class="fav-books">Add a new book</h2>
+                <form class="form-books">
+                    <input id="bookTitle" type="text"  placeholder="Title">
+                    <input id="bookAuthor" type="text" placeholder="Author">
+                    <span class="error-msg"></span>
+                    <button id="add-book" type ="submit">Add</button>
+                </form>
+            </section>
+
+            <section class="contact-container hide" id="contactUs-container">
+                <h2 class="contact-header">Contact information</h2>
+                <p class="contact-info">Do you have any questions or you just want to 
+                    say "Hello"? <br> You can reach out to us!
+                </p>
+                <ul class="contact-details">
+                    <li>Our e-mail: mail@mail.com</li>
+                    <li>Our phone number: +2349029661645</li>
+                    <li>Our address: Streetname 22, City, Country</li>
+                </ul>
+            </section>
+        </section>
+    </main> 
     <footer class="footer">
-        <p class="copyright">&copy; Awesome Book 2022 - rights reserved by</p>
-        <a target="_blank" rel="noopener" href="https://github.com/Smart1-hub">Ademola</a>
+        <p>&copy; Awesome book 2022 - All right reserved - by
+          <a target="_blank" rel="noopener" href="https://github.com/Smart1-hub">Ademola</a> 
+        </p>
     </footer>
-    <script type="module" src="index.js"></script>
+ 
+    <script type="module" src="./index.js"></script>
 </body>
 </html>
