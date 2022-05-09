@@ -1,6 +1,6 @@
 # Awesome-Books with ES6
-This project embodies a basic website that allows users to add/remove books from a list using ES6 syntax. JavaScript objects and arrays was used. 
-
+This project embodies a basic website that allows users to add/remove books
+# Mobile-Design
 
 ![screenshot]()
 
@@ -8,14 +8,13 @@ This my Capstone Project in the Module 1 Microverse curriculum.
 
 ## Built With
 
-- JS (ES6 Syntax)
+- JS
 - HTML
 - CSS
-- Github
 
 ## Live Demo
 
-[Live Demo Link](https://smart1-hub.github.io/Awesome-Books-ES6/)
+[Live Demo Link]()
 
 ## Getting Started
 
@@ -39,10 +38,19 @@ To get a local copy up and running:
 
 - LinkedIn: [Ademola Adebayo](https://www.linkedin.com/in/ademola-adebayo-81051578/)
 
+- Loom: 
+https://www.loom.com/share/4bae1adf0d6e49c6afcd492efdf32c24
+
+## Design By
+
+👤 **Cindy Shin**
+
+- Behance: https://www.behance.net/gallery/29845175/CC-Global-Summit-2015
 
 ## Acknowledgement
 
 - Microvers Org.
+- Cindy Shin
 - All whose codes have been built on
 
 ## Contributing
@@ -53,6 +61,7 @@ Contributions, issues, and feature requests are welcome!
 
 Give a ⭐ if you like this project and how it is built!
 
+
 ## 📝 License
 
-This project is [MIT](https://github.com/Smart1-hub/readme-template/blob/master/MIT.md) licensed.
+This project is [MIT](https://github.com/microverseinc/readme-template/blob/master/MIT.md) licensed.
